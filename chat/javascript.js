@@ -4,13 +4,13 @@ window.onload = function() {
   // Your web app's Firebase configuration
 
   const firebaseConfig = {
-    apiKey: "AIzaSyBVld6UhiYsz7UNdXyXvtHJknanBkwDLSE",
-    authDomain: "chatwithme-4f314.firebaseapp.com",
-    projectId: "chatwithme-4f314",
-    storageBucket: "chatwithme-4f314.appspot.com",
-    messagingSenderId: "86791589321",
-    appId: "1:86791589321:web:ebf5bebf96ad6c65466c18",
-    measurementId: "G-2PJPWKBEJW"
+    apiKey: "GIVE YOUR APIKEY",
+    authDomain: "GIVE YOUR AUTHDOMAIN",
+    projectId: "GIVE YOUR PROJECTID",
+    storageBucket: "GIVE STORAGEBUCKET",
+    messagingSenderId: "GIVE YOUR MESSAGINGSENDER ID",
+    appId: "GIVE YOUR APPID",
+    measurementId: "GIVE YOUR MEASUREMENTID"
   };
 
   // Initialize Firebase
@@ -273,7 +273,7 @@ window.onload = function() {
           unordered.push([messages[i], messages[i].index]);
         }
 
-        // Now this is straight up from stack overflow 🤣
+        // Now this is straight up from stack overflow 
         // Sort the unordered messages by the guide
         guide.forEach(function(key) {
           var found = false
