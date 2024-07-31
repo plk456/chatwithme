@@ -1,5 +1,3 @@
-// We enclose this in window.onload.
-// So we don't have ridiculous errors.
 window.onload = function() {
   // Your web app's Firebase configuration
 
@@ -34,7 +32,6 @@ window.onload = function() {
     }
     // create_title() is used to create the title
     create_title(){
-      // This is the title creator. 🎉
       var title_container = document.createElement('div')
       title_container.setAttribute('id', 'title_container')
       var title_inner_container = document.createElement('div')
@@ -50,7 +47,7 @@ window.onload = function() {
     }
     // create_join_form() creates the join form
     create_join_form(){
-      // YOU MUST HAVE (PARENT = THIS). OR NOT. I'M NOT YOUR BOSS!😂
+      
       var parent = this;
 
       var join_container = document.createElement('div')
@@ -211,10 +208,7 @@ window.onload = function() {
     // Sends message/saves the message to firebase database
     send_message(message){
       var parent = this
-      // if the local storage name is null and there is no message
-      // then return/don't send the message. The user is somehow hacking
-      // to send messages. Or they just deleted the
-      // localstorage themselves. But hacking sounds cooler!!
+    
       if(parent.get_name() == null && message == null){
         return
       }
@@ -256,11 +250,6 @@ window.onload = function() {
         if(messages_object.numChildren() == 0){
           return
         }
-
-        // OK! SO IF YOU'RE A ROOKIE CODER. THIS IS GOING TO BE
-        // SUPER EASY-ISH! I THINK. MAYBE NOT. WE'LL SEE!
-
-        // convert the message object values to an array.
         var messages = Object.values(messages_object.val());
         var guide = [] // this will be our guide to organizing the messages
         var unordered = [] // unordered messages
@@ -329,9 +318,7 @@ window.onload = function() {
   }
   // So we've "built" our app. Let's make it work!!
   var app = new MEME_CHAT()
-  // If we have a name stored in localStorage.
-  // Then use that name. Otherwise , if not.
-  // Go to home.
+  
   if(app.get_name() != null){
     app.chat()
   }
